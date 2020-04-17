@@ -13,6 +13,7 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     height: 100%;
+    padding: 2em;
 
     &:before {
         content: '';
