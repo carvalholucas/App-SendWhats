@@ -69,6 +69,7 @@ export const TextAreaStyle = styled(TextArea)`
 `
 
 export const ActionButton = styled(Button)`
+    font-weight: 600;
     margin-top: 30px;
 `
 
