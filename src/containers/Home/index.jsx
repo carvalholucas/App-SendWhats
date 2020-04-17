@@ -1,11 +1,12 @@
 import React from 'react'
 import * as S from './styles'
 import WhatsappLogo from '../../assets/whatsapp.svg'
+
 const Home = () => (
     <S.Container>
         <S.FormWrapper layout="vertical">
             <S.Header>
-                <img src={WhatsappLogo} alt="WhatsApp" style={{ width: 45 }} />
+                <S.Image src={WhatsappLogo} alt="WhatsApp"/>
                 <h1>Gerador de link whatsapp</h1>
             </S.Header>
             <S.Label label="Número do seu WhatsApp">

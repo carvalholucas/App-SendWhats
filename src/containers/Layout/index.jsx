@@ -5,9 +5,7 @@ import { Layout } from 'antd'
 const Wrapper = (props) => {
     return (
         <Layout>
-            <Layout>
-                {props.children}
-            </Layout>
+            {props.children}
         </Layout>
     )
 }
