@@ -14,6 +14,7 @@ export const Container = styled.section`
     font-family: 'Roboto', sans-serif;
     justify-content: center;
     height: 100vh;
+    overflow: auto;
     padding: 2em;
 
     &:before {

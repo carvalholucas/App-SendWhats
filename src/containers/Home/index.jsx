@@ -28,6 +28,7 @@ const Home = () => {
                             allowClear={true}
                             size="large"
                             value={phoneMasked}
+                            pattern="[0-9]*"
                             style={{ borderRadius: '0 5px 5px 0' }}
                             onChange={e => handlePhone(e.target.value)}
                             placeholder="Seu número" />
