@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Layout } from 'antd'
+import * as S from './styles'
 
 const Wrapper = (props) => {
     return (
-        <Layout>
+        <S.MainLayout>
             {props.children}
-        </Layout>
+        </S.MainLayout>
     )
 }
 

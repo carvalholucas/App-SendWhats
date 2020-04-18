@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { Button, Form, Input } from 'antd'
+import { Button, Form, Input, Select } from 'antd'
 import WhatsappImage from '../../assets/whatsapp-bg.png'
 
 const { TextArea } = Input
@@ -11,8 +11,9 @@ export const Container = styled.section`
     align-items: center;
     background-image: ${`url(${WhatsappImage})`};
     display: flex;
+    font-family: 'Roboto', sans-serif;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     padding: 2em;
 
     &:before {
@@ -32,7 +33,7 @@ export const FormWrapper = styled(Form)`
     z-index: 2;
 
     ${media.lessThan("medium")`
-        width: 80vw;
+        width: 100vw;
     `}
 `
 
@@ -72,6 +73,18 @@ export const TextAreaStyle = styled(TextArea)`
     margin-bottom: 0 !important;
     padding: 1em;
     resize: none;
+`
+
+export const SelectStyle = styled(Select)`
+    width: 20% !important;
+
+    .ant-select-selector {
+        border: none !important;
+        border-radius: 5px 0 0 5px !important;
+        box-shadow: 0px 0px 12px rgba(100,100,100,.1);
+        color: #263056;
+        font-size: .8em;
+    }
 `
 
 export const ActionButton = styled(Button)`

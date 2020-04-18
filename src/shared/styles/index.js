@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { Layout, Drawer } from 'antd'
+import { Layout } from 'antd'
 
 const { Content } = Layout
 
