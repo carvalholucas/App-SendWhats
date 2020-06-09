@@ -1,18 +1,24 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
+import PrivateRoute from '../../shared/components/PrivateRoute'
 
 import Layout from '../Layout'
+import { MainLayout } from '../Layout/styles'
 import Home from '../Home'
+import Auth from '../Auth'
 
 const wrappedRoutes = () => (
-    <Layout>
-        <Route exact path="/" component={Home} />
-    </Layout>
+    <MainLayout>
+        <Layout>
+            <Route exact path="/" component={Home} />
+        </Layout>
+    </MainLayout>
 )
 
 const Routes = () => (
     <Switch>
-        <Route path="/" component={wrappedRoutes} />
+        <PrivateRoute exact path="/" component={wrappedRoutes} />
+        <Route path="/auth" component={Auth} />
         <Redirect from="*" to="/" />
     </Switch>
 )

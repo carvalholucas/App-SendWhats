@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const MainLayout = styled.main`
+import { Layout } from 'antd'
+
+export const MainLayout = styled(Layout)`
     height: 100%;
 
     /* ${media.lessThan("medium")`

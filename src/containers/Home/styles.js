@@ -1,125 +1,81 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { Button, Form, Input, Select } from 'antd'
-import WhatsappImage from '../../assets/whatsapp-bg.png'
-
-const { TextArea } = Input
-const { Item } = Form
-
-export const Container = styled.section`
-    align-items: center;
-    background-image: ${`url(${WhatsappImage})`};
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    justify-content: center;
-    height: 100vh;
-    overflow: auto;
-    padding: 2em;
+export const MainWrapper = styled.section`
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-auto-rows: 1fr;
+    padding: 4em;
 
     &:before {
         content: '';
-        background: #25d366;
-        display: block;
-        height: 50vh;
-        opacity: .6;
-        position: absolute;
-        top: 0;
-        width: 100%;
+        width: 0;
+        padding-bottom: 100%;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    & > *:first-child {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
     }
 `
 
-export const FormWrapper = styled(Form)`
-    width: 35vw;
-    z-index: 2;
-
-    ${media.lessThan("medium")`
-        width: 100vw;
-    `}
-`
-
-export const Label = styled(Item)`
-    font-weight: 600;
-
-    .ant-form-item-label > label {
-        color: #2c6558;
-    }
-`
-
-export const InputStyle = styled(Input)`
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 12px rgba(100,100,100,.1);
-    color: #263056;
-    font-family: Montserrat-Regular;
-
-    .ant-input {
-        font-size: .8em;
-        font-weight: 600;
-    }
-
-    .ant-input-group-addon {
-        border: none !important;
-        border-radius: 5px 0 0 5px;
-    }
-`
-
-export const TextAreaStyle = styled(TextArea)`
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 12px rgba(100,100,100,.1);
-    color: #263056;
-    font-family: Montserrat-Regular;
-    font-weight: 600;
-    margin-bottom: 0 !important;
-    padding: 1em;
-    resize: none;
-`
-
-export const SelectStyle = styled(Select)`
-    width: 20% !important;
-
-    .ant-select-selector {
-        border: none !important;
-        border-radius: 5px 0 0 5px !important;
-        box-shadow: 0px 0px 12px rgba(100,100,100,.1);
-        color: #263056;
-        font-size: .8em;
-    }
-`
-
-export const ActionButton = styled(Button)`
-    font-weight: 600;
-    margin-top: 30px;
-`
-
-export const Header = styled.header`
+export const Card = styled.section`
     align-items: center;
+    border: 2px dashed #d9dfe6;
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 50px;
+    padding: 1.2em;
+    transition: all .2s;
+    cursor: pointer;
 
-    h1 {
-        margin-bottom: 0px;
-        color: rgb(255, 255, 255);
-        font-size: 2em;
-        font-weight: 700;
-        text-align: center;
-        margin-left: 15px;
+    &.card-contact {
+        align-items: flex-start;
+        background: #ffffff;
+        border: none;
+        justify-content: space-between;
+        padding: 1.2em;
+        word-break: break-word;
+
+        /* &:hover {
+            background: #49aa98;
+        } */
     }
 
-    ${media.lessThan("medium")`
-        h1 {
-            font-size: 1.7em;
-            margin-left: 0;
-        }        
-    `}
+    &:hover {
+        transform: scale(1.04);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(184,184,184,0.3);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(184,184,184,0.3);
+        box-shadow: 0px 0px 15px 0px rgba(184,184,184,0.3);
+    }
 `
 
-export const Image = styled.img`
-    width: 45px;
+export const CardTitle = styled.p`
+    color: #49aa98;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 1.5em;
+`
 
-    ${media.lessThan("medium")`
-        display: none; 
-    `}
+export const CardButton = styled.a`
+    border-radius: 5px;
+    border: 1px solid #49aa98;
+    color: #49aa98;
+    font-size: 14px;
+    padding: .8em;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        background: #49aa98;
+        color: #fff;
+    }
+`
+
+export const CardDesc = styled.section`
+    font-size: 13px;
 `

@@ -1,0 +1,14 @@
+.ant-popover-inner {
+    border-radius: 7px !important;
+    transform: translate(3em, 1em);
+}
+
+.ant-popover-inner-content {
+    padding: 0 !important;
+}
+
+.ant-popover-placement-topLeft >
+.ant-popover-content >
+.ant-popover-arrow {
+    display: none;
+}
